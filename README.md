@@ -1,18 +1,24 @@
 # Netflix Clone
 
-> A Vue.js project
 
-## Build Setup
+My version of Netflix. Built with Vue.JS.
 
-``` bash
-# install dependencies
-npm install
+Let me know what you guys think!
 
-# serve with hot reload at localhost:8080
-npm run dev
+Check out the Project:  https://nillsvanlimbeek.github.io/netflix_clone
 
-# build for production with minification
-npm run build
-```
+>P.S. Sometimes the posters dont show up. If that is the case please refresh the page.
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## User Stories
+* The main page shows the most populair movies and TV series in five categories. (Netflix Originals, Action, Drama, Comedy and Fantasy).
+* User can change the logged in user in the top right corner.
+* User can scroll through the sections.
+* User can click on the play and arrow buttons to get more information on the clicked item.
+* User can search for movies and TV shows.
+* User can click on the search results to get more information.
+
+
+![User Menu & Users](./project_images/user-menu.gif)
+
