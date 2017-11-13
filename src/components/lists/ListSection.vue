@@ -24,6 +24,10 @@
 	@import "../../scss/reset.scss";
 	@import "../../scss/variables.scss";
 
+	.list-wrapper {
+		background-color: black;
+	}
+
 	.netflix,
 	.action,
 	.drama,

@@ -76,7 +76,6 @@
 	}
 
 	.list-section {
-		margin-top: -100px;
 		z-index: 2;
 		flex: 1 0 auto;
 	}

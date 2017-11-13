@@ -1,6 +1,6 @@
 <template>
 	<div class="header-wrapper">
-		<img src="../../assets/logo.png" alt="Netflix Logo">
+		<img src="logo.png" alt="Netflix Logo">
 
 		<div class="header-menu">
 			<div class="left" @mouseover="showExploreDropdown = true" @mouseleave="showExploreDropdown = false">

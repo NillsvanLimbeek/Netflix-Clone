@@ -17,6 +17,11 @@
 
 <script>
 	export default {
+		data() {
+			return {
+				input: this.genre	
+			}
+		},
 		methods: {
 			clickArrow() {
 				//Emit Index Number
