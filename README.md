@@ -1,4 +1,4 @@
-# netflix
+# Netflix Clone
 
 > A Vue.js project
 

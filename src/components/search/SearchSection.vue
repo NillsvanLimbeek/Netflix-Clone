@@ -56,5 +56,6 @@
 		width: 100vw;
 		margin-top: 75px;
 		color: white;
+		background-color: black;
 	}
 </style>
