@@ -1,0 +1,42 @@
+.user {
+    @include header-box-border;
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    background: $color-black-light;
+
+    &__icon {
+        @include header-box-arrow;
+        left: 10rem;
+    }
+
+    &__names {
+        border-bottom: 1px solid $color-border-light;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 1.5rem 3rem;
+    }
+    
+    &__item {
+        display: flex;
+        margin-bottom: .3rem;
+        border-bottom: 1px solid transparent;
+
+        & > :first-child {
+            margin-right: .75rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom: 1px solid $color-white;
+        }
+    }
+}

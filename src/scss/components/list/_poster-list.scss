@@ -1,0 +1,11 @@
+.poster {
+    margin-bottom: 3rem;
+}
+
+.poster-list,
+.backdrop-list {
+
+    &__img {
+        width: 100%;
+    }
+}

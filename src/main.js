@@ -1,13 +1,17 @@
 import Vue from 'vue'
-import VueResource from "vue-resource"
+import axios from "axios";
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import { store } from "./store/store"
-import VModal from "vue-js-modal"
+import VModal from "vue-js-modal";
+
 import App from './App.vue'
 
-Vue.use(VueResource);
+import { store } from "./store/store";
+
 Vue.use(VueAwesomeSwiper);
 Vue.use(VModal);
+
+//EventBus
+export const EventBus = new Vue();
 
 new Vue({
   el: '#app',

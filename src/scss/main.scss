@@ -1,0 +1,40 @@
+@import "./abstract/variables";
+@import "./abstract/mixins";
+@import "./abstract/utility";
+
+@import "./base/base";
+@import "./base/typography";
+
+//Reusable Compontents
+@import "./components/_buttons.scss";
+
+//App Components
+@import "./components/app";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/search";
+@import "./components/footer";
+
+//Header
+@import "./components/header/explore-menu";
+@import "./components/header/alert-menu";
+@import "./components/header/user-menu";
+
+//List
+@import "./components/list/poster-list";
+@import "./components/list/poster-detail";
+@import "./components/list/item-detail";
+
+//Search
+@import "./components/search/search-item";
+
+//Swiper CSS
+@import "../node_modules/swiper/dist/css/swiper.css";
+
+.swiper-container {
+    padding: 3rem 0;
+}
+
+body {
+    background: $color-black;
+}

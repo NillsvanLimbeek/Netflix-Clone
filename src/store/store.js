@@ -1,53 +1,79 @@
 import Vue from "vue";
-import VueX from "vuex";
-import _ from "lodash";
+import Vuex from "vuex";
 
-Vue.use(VueX);
-Vue.use(_);
+Vue.use(Vuex);
 
-export const store = new VueX.Store({
-  state: {
-    // Users
-    selectedUser: "Nills",
-    selectedColor: "#4ada4a",
-    
-    //Selected Movie or TV Show
-    selectedItem: [],
-
-    //Selected Index Number
-    selectedIndex: "",
-
-    //Search Results
-    search: [],
-
-    //Show or Hide MainSection
-    mainSection: true,
-
-    //List Objects
-    netflix: { title: "Netflix Originals", genre: "netflix", arr: [], itemDetail: false, url: "https://api.themoviedb.org/3/discover/tv?api_key=9ea839ec7891591994ec0f540b4b199f&language=en-US&sort_by=popularity.desc&page=1&with_networks=213&include_null_first_air_dates=true" },
-    action: { title: "Action", genre: "action", arr: [], itemDetail: false, url: "https://api.themoviedb.org/3/discover/movie?api_key=9ea839ec7891591994ec0f540b4b199f&language=en-US&sort_by=popularity.desc&page=1&with_genres=28&year=0" },
-    drama: { title: "Drama", genre: "drama", arr: [], itemDetail: false, url: "https://api.themoviedb.org/3/discover/tv?api_key=9ea839ec7891591994ec0f540b4b199f&language=en-US&sort_by=popularity.desc&page=1&with_genres=18&with_original_language=en" },
-    comedy: { title: "Comedy", genre: "comedy", arr: [], itemDetail: false, url: "https://api.themoviedb.org/3/discover/movie?api_key=9ea839ec7891591994ec0f540b4b199f&language=en-US&sort_by=popularity.desc&page=1&with_genres=35" },
-    fantasy: { title: "Sci-Fi & Fantasy", genre: "fantasy", arr: [], itemDetail: false, url: "https://api.themoviedb.org/3/discover/tv?api_key=9ea839ec7891591994ec0f540b4b199f&language=en-US&sort_by=popularity.desc&page=1&with_genres=10765&without_genres=16&with_original_language=en" },
-  },
-  getters: {
-    showTitle: state => {
-      return state.selectedItem[0].title || state.selectedItem[0].name;
+export const store = new Vuex.Store({
+    state: {
+        //Current User
+        currentUser: {
+            name: "Nills",
+            color: "#4ada4a"
+        },
+        //List of Sections
+        list: [
+            { 
+                title: "Netflix Originals",
+                type: "Poster",
+                index: 0,
+                showItem: false,
+                url: "https://api.themoviedb.org/3/discover/tv?api_key=9ea839ec7891591994ec0f540b4b199f&sort_by=popularity.desc&with_networks=213",
+                list: []
+            }, 
+            {
+                title: "Action",
+                type: "Backdrop",
+                index: 1,
+                showItem: false,
+                url: "https://api.themoviedb.org/3/discover/movie?api_key=9ea839ec7891591994ec0f540b4b199f&sort_by=popularity.desc&with_genres=28",
+                list: [] 
+            },
+            {
+                title: "Sci-Fi & Fantasy",
+                type: "Backdrop",
+                index: 2,
+                showItem: false,
+                url: "https://api.themoviedb.org/3/discover/tv?api_key=9ea839ec7891591994ec0f540b4b199f&sort_by=popularity.desc&with_genres=10765",
+                list: []
+            }
+        ],
+        //Current Selected Item
+        selectedItem: {},
+        //Search Results
+        searchResults: [],
+        //Show Main Section
+        showMainSection: true
     },
-    showBackdrop: state => {
-      return state.selectedItem[0].backdrop_path;
+    getters: {
+        getUser: state => {
+            return state.currentUser;
+        },
+        getSelectedItem: state => {
+            return state.selectedItem;
+        },
+        getSearchResults: state => {
+            return state.searchResults;
+        }
     },
-    showOverview: state => {
-      return state.selectedItem[0].overview;
-    },
-    tvShow: state => {
-      state.selectedItem[0].name;
-    },
-    movie: state => {
-      state.selectedItem[0].title;
-    },
-    searchTitle: state => {
-      return state.search.title || state.search.name;
+    mutations: {
+        changeUser: (state, input) => {
+            state.currentUser = input;
+        },
+        changeSelectedItem: (state, input) => {
+            state.selectedItem = input;
+        },
+        closeItems: state => {
+            const list = state.list;
+            list.forEach(item => item.showItem = false);
+        },
+        openItem: (state, index) => {            
+            state.list[index].showItem = true;
+        },
+        changeSearchResults: (state, input) => {
+            state.searchResults = input;
+        },
+        changeMainSection: (state, input) => {
+            state.showMainSection = input;
+        }
     }
-  }
 })

@@ -1,0 +1,22 @@
+@mixin flex-center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin header-box-border {
+    border: 2px solid $color-white;
+    border-color: $color-white $color-border-light $color-border-light $color-border-light;
+    border-width: 3px 1px 1px 1px;
+}
+
+@mixin header-box-arrow {
+    position: absolute;
+    top: -1.5rem;
+    transform: rotate(180deg);
+}

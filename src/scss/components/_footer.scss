@@ -1,0 +1,9 @@
+.footer {
+    @include flex-center-align;
+    height: 15rem;
+    background: linear-gradient(to bottom, transparent, rgb(66, 66, 66));
+
+    & a {
+        color: $color-white;
+    }
+}

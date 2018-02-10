@@ -1,0 +1,28 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("https://image.tmdb.org/t/p/original/tQkigP2fItdzJWvtIhBvHxgs5yE.jpg");
+    background-size: cover;
+    background-position: top left;
+
+    &__left {
+        @include flex-center;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        margin-left: 2rem;
+
+        & > h1, p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__fade-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 25%;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent, $color-black);
+    }
+}

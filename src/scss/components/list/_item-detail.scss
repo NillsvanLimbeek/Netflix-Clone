@@ -1,0 +1,33 @@
+.item-detail {
+    position: relative;
+    height: 60rem;
+    background-size: cover;
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 4rem;
+        color: $color-white;
+        cursor: pointer;
+    }
+
+    &__content {
+        @include flex-center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        padding-left: 3rem;
+        background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0));
+
+
+        & > p {
+            margin: 1rem 0 2.5rem 0;
+        }
+    }
+}
+
+.modal {
+    height: 100%;
+    background-size: cover;
+}

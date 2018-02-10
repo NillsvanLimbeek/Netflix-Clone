@@ -1,0 +1,22 @@
+.btn {
+    font-size: 2rem;
+    padding: 1.5rem 5rem;
+    margin-right: 1.5rem;
+    background: none;
+    color: $color-white;
+    cursor: pointer;
+    border: none;
+    background: $color-btn-background;
+    border-radius: 3px;
+    transition: all .3s;
+
+    &:hover {
+        background: $color-white;
+        color: $color-black;
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .25);
+    }
+
+    &:hover .icon {
+        color: $color-black;
+    }
+}

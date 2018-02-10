@@ -1,0 +1,55 @@
+body {
+    font-family: "Open Sans";
+    font-size: 1.6rem;
+}
+
+.heading-primary {
+    font-size: 5rem;
+    color: $color-white;
+}
+
+.heading-secondary {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+}
+
+.text-regular {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $color-white;
+    
+    &--red {
+        color: $color-red;
+        font-weight: 700;
+        margin-right: 1rem;
+    }
+    
+    &--thick {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    &--small {
+        font-size: 1.5rem;
+    }
+
+    &--tiny {
+        font-size: 1.25rem;
+    }
+}
+
+.icon {
+    color: $color-white;
+    font-size: 2rem;
+    transition: all .3s;
+
+    &--red {
+        color: $color-red;
+    }
+
+    &--small {
+        font-size: 1.75rem;
+    }
+}

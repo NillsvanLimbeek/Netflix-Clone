@@ -1,0 +1,43 @@
+.search-item {
+    position: relative;
+    transition: all .3s .2s;
+    
+    &:hover {
+        transform: scale(1.125);
+    }
+    
+    &:hover &__click-area {
+        background: rgba($color-black, .5);
+    }
+    
+    &:hover &__play-btn {
+        opacity: 1;
+    }
+
+    &__click-area {
+        @include flex-center-align;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-black, 0);
+        transition: all .3s .2s;
+    }
+
+    &__play-btn {
+        opacity: 0;
+        transition: all .3s .2s;
+    }
+
+    &__play {
+        font-size: 7rem;
+        color: $color-white;
+        fill-opacity: .5;
+        cursor: pointer;
+
+        &:hover {
+            fill-opacity: 1;
+        }
+    }
+}
