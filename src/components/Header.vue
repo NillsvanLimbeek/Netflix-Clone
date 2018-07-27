@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-        <img src="../assets/logo.png" alt="Logo" class="header__logo">
-        <!-- <img src="logo.png" alt="Logo" class="header__logo"> -->
+        <!-- <img src="../assets/logo.png" alt="Logo" class="header__logo"> -->
+        <img src="logo.png" alt="Logo" class="header__logo">
 
         <div class="header__menu">
             <div class="header__left"

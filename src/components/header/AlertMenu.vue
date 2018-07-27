@@ -12,7 +12,7 @@
 
                         <div class="alert__text">
                             <p class="text-regular text-regular--tiny margin-bottom-tiny">{{item.heading}}</p>
-                            <p class="text-regular margin-bottom-tiny">{{item.title}}</p>    
+                            <p class="text-regular margin-bottom-tiny">{{item.title}}</p>
                             <p class="text-regular text-regular--tiny">{{item.date}}</p>
                         </div>
                     </div>

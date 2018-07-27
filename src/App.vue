@@ -14,7 +14,7 @@
         <app-footer></app-footer>
 
         <modal	name="item-detail"
-				width="80%" 
+				width="80%"
 				height="50%"
 				transition="ease-in-out">
 			<app-modal></app-modal>
@@ -34,7 +34,7 @@
         name: 'app',
         data () {
             return {
-                
+
             }
         },
         computed: {

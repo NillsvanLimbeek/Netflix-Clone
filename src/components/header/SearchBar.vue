@@ -2,9 +2,9 @@
     <div class="header__search">
         <label for="input"><i class="icon header__search-icon fas fa-search"></i></label>
         <input class="header__input"
-               :class="{ 'search-focus': searchFocus }"  
-               id="input" 
-               type="text" 
+               :class="{ 'search-focus': searchFocus }"
+               id="input"
+               type="text"
                placeholder="Search"
                v-model="search"
                @input="showSearch">
